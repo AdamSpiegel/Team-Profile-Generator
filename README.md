@@ -35,7 +35,7 @@
   You then have an option to "Finish Building Your Team", and then an HTML webpage generates displaying your customized built out software team.
 
   ## Further Development :man_technologist:
-
+  * Generatehtml functionality needs to be tuned up slightly.  Currently, html file is able to generate, but data that is being entered by user, is not being pulled into that file.  All other project requirements are met, while this is being finalized. 
 
   ## Project Contributors :computer_mouse:	
   Adam Spiegel

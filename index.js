@@ -6,8 +6,6 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager")
 const teamArray = []
 
-// module.exports = Team, then run generatehtml
-// Need specific question arrays for each action the Manager is taking while completing 
 
 // Team Manager Initial Questions
 start()
@@ -159,7 +157,7 @@ function getIntern() {
         })
 }
 
-// can mimick generatemarkdown function from ReadMe
+// Finalizes prompt questions with finished function and creates a writeToFile function 
 
 function finished() {
     writeToFile('./dist/index.html', generatehtml(teamArray));
@@ -167,20 +165,8 @@ function finished() {
     console.log(teamArray)
 }
 
+// Generates HTML to be displayed in output folder, dist. Need to still pull in user's entered data correctly.
 function generatehtml(team) {
-    // console.log(team)
-    `<div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Employee Name</h5>
-            <p class="card-text"></p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:</li>
-            <li class="list-group-item">Email:</li>
-            <li class="list-group-item">Office Number:</li>
-        </ul>
-    </div>`
-
     return `<!DOCTYPE html>
     <html lang="en">
     
@@ -206,8 +192,38 @@ function generatehtml(team) {
                     <h1 class="text-center">My Team</h1>
                 </div>
             </div>
-            // Insert my employees here
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Manager</h5>
+            <p class="card-text"></p>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">data.id</li>
+            <li class="list-group-item">data.email</li>
+            <li class="list-group-item">data.officenumber</li>
+        </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Engineer</h5>
+        <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">data.id</li>
+        <li class="list-group-item">data.email</li>
+        <li class="list-group-item">data.github</li>
+    </ul>
+    </div>   <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Intern</h5>
+    <p class="card-text"></p>
+</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">data.id</li>
+    <li class="list-group-item">data.email</li>
+    <li class="list-group-item">data.achool</li>
+</ul>
+</div>
         
                 <!-- Bootstrap Bundle -->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
